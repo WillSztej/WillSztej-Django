@@ -2,7 +2,7 @@ from django.http import HttpResponse
 import requests
 import json as json_lib
 
-# Create your views here.
+# View to format and return language stats from GitHub API
 
 repo_names_url = 'https://api.github.com/users/WillSztej/repos'
 

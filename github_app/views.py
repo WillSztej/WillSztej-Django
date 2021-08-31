@@ -3,6 +3,7 @@ import requests
 import json as json_lib
 
 # View to format and return language stats from GitHub API
+# test comment
 
 repo_names_url = 'https://api.github.com/users/WillSztej/repos'
 
@@ -36,7 +37,7 @@ def index(request):
     lang_percentage = {}
     formatted_list = []
     for language in languages:
-        lang_percentage[language] = lang_stats[language] / byte_sum * 100
+        lang_percentage[language] = lang_stats[language] / byte_sum
         formatted_list.append({'category': language, 'value': round(lang_percentage[language], 4)})
 
     print(formatted_list)
